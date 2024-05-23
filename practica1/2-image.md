@@ -28,8 +28,11 @@ Descargar la imagen **hello-world**
 # COMPLETAR 
 
 ```
-docker pull hello-word
+docker pull hello-world
 ```
+
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/b0b66bbf-65fe-4123-931b-f42fe3a83c05)
+
 
 
 **¿Qué es nginx?**
@@ -52,8 +55,7 @@ docker images
 ```
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
-![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/8ebfaab5-8c2a-4c49-af78-82837380a562)
-
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/d1c2fd3b-fd63-4677-9e23-0d4e41ec187e)
 
 
 **Identificadores**
@@ -73,7 +75,8 @@ Inspeccionar la imagen hello-world
 ```
 docker inspect hello-world
 ```
-![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/53dfc6eb-1e16-4aad-b0ba-c2471c4c8855)
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/c3e0c25b-cce6-465f-b650-228f65d9bc33)
+
 
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
@@ -102,8 +105,7 @@ Eliminar la imagen hello-world
 docker rmi hello-world
 ```
 
-![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/d4a26704-f450-413f-a3a2-d9cd1d43e0c5)
-
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/85a18e59-f075-4a3c-ae75-b56f9f82da2a)
 
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.

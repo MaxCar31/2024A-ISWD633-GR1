@@ -32,7 +32,7 @@ docker pull hello-word
 ```
 
 
-**¿Qué es nginx**
+**¿Qué es nginx?**
 # COMPLETAR 
 
 Nginx es un servidor web de alto rendimiento y proxy inverso utilizado para manejar múltiples protocolos de Internet, incluyendo HTTP, HTTPS, SMTP, POP3 e IMAP. Es conocido por su alta eficiencia y capacidad para gestionar grandes volúmenes de conexiones concurrentes, lo que lo hace ideal para aplicaciones web modernas, equilibrado de carga y proxy de correo.
@@ -41,8 +41,9 @@ Descargar la imagen  **nginx** en la versión **alpine**
 # COMPLETAR 
 ```
 docker pull nginx:alpine
-
 ```
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/83677fae-b183-4ef3-a0cc-3f53a5317d5a)
+
 
 ### Listar imágenes
 
@@ -51,6 +52,9 @@ docker images
 ```
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/8ebfaab5-8c2a-4c49-af78-82837380a562)
+
+
 
 **Identificadores**
 En Docker, se utilizan varios identificadores para diferenciar de manera única los elementos del sistema, como imágenes, contenedores, volúmenes y redes. Estos identificadores son generados automáticamente por Docker y son únicos dentro del contexto del sistema Docker en el que se encuentran. 
@@ -69,6 +73,8 @@ Inspeccionar la imagen hello-world
 ```
 docker inspect hello-world
 ```
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/53dfc6eb-1e16-4aad-b0ba-c2471c4c8855)
+
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
 
@@ -95,6 +101,9 @@ Eliminar la imagen hello-world
 ```
 docker rmi hello-world
 ```
+
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/d4a26704-f450-413f-a3a2-d9cd1d43e0c5)
+
 
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.

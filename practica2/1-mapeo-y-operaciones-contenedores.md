@@ -37,7 +37,21 @@ docker exec jenkins-server ls -l
 
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+
+El comando ls se utiliza en sistemas operativos Unix y similares (como Linux y macOS) para listar el contenido de un directorio. Al ejecutar ls, obtienes una lista de archivos y directorios dentro del directorio actual o especificado.
+
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+
+El argumento -l junto al comando ls proporciona una lista detallada del contenido del directorio. La salida en modo detallado incluye información adicional sobre cada archivo y directorio, como:
+
+- Permisos: Indican quién puede leer, escribir o ejecutar el archivo.
+- Número de enlaces: Muestra cuántos enlaces apuntan al archivo.
+- Propietario: Indica el usuario propietario del archivo.
+- Grupo: Indica el grupo al que pertenece el archivo.
+- Tamaño: Muestra el tamaño del archivo en bytes.
+- Fecha y hora: Indica la última fecha y hora en que el archivo fue modificado.
+- Nombre: Muestra el nombre del archivo o directorio.
+
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
 # COMPLETAR
 # COLOCAR UNA CAPTURA DE PANTALLA

@@ -2,11 +2,12 @@
 ### Usando una forma más semántica cuando se especifican puertos
 
 ```
-docker run -d --name <nombre contenedor> --publish published=<valorPuertoHost>,target=<valor> <nombre imagen>:<tag> 
+docker run -d --name jenkins-server --publish published=8080,target=8080 --publish published=50000,target=50000 jenkins/jenkins:alpine3.18-jdk11
+
 ```
 ### Publicando todos los puertos
 ```
-docker run -P -d --name <nombre contenedor> <nombre imagen>:<tag> 
+docker run -P -d --name jenkins-server jenkins/jenkins:alpine3.18-jdk11
 ```
 
 -P: le indica a Docker que asigne automáticamente puertos aleatorios en tu host para todos los puertos expuestos por el contenedor.
@@ -30,7 +31,7 @@ Para obtener la contraseña solicitada es necesario ingresar al contenedor.
 
 ### Ejecutar un comando en un contenedor de Docker en ejecución
 ```
-docker exec <nombre contenedor> <comando> <argumentos opcionales>
+docker exec jenkins-server ls -l
 ```
 
 
@@ -49,19 +50,14 @@ Para saber qué comando utilizar para abrir una terminal dentro de un contenedor
 - Para imágenes basadas en Alpine Linux, puedes probar con sh.
 ![Imagen](imagenes/jenkins-i.PNG)
 ```
-docker exec -i <nombre contenedor> <programa o comando>
+docker exec -i jenkins-server ls
 ```
 -i: mantiene abierta la entrada estándar (stdin) del contenedor. Esto significa que puedes enviar datos al proceso que se está ejecutando en el contenedor a través de la terminal local. *Sin embargo, esto no asigna un terminal al contenedor, por lo que no podrás ver la salida del proceso de forma interactiva.*
 
 ### Ejecutar una de las siguientes instrucciones
 ```
-docker exec -i <nombre contenedor> /bin/bash 
+docker exec -it jenkins-server /bin/bash 
 ```
-ó
-```
-docker exec -i <nombre contenedor> bash 
-```
-
 
 **Considerar**
 - /bin/bash: Al especificar la ruta completa del shell, Docker buscará el ejecutable /bin/bash en el sistema de archivos del contenedor y lo ejecutará. Esto es útil cuando quieres asegurarte de que se está utilizando un shell específico que está ubicado en una ubicación conocida en el sistema de archivos del contenedor. 
@@ -87,12 +83,9 @@ El problema se debe a que no se ha asignado un terminal de salida al contenedor 
 Ejecutar un shell interactivo bidireccional en un contenedor de Docker significa abrir una sesión de shell en el contenedor que permite la interacción bidireccional entre la terminal local y el contenedor. Es decir, puedes enviar comandos desde tu terminal local al contenedor y recibir la salida de esos comandos de vuelta en tu terminal local, al igual que si estuvieras trabajando directamente en la terminal del contenedor.
 
 ![Imagen](imagenes/jenkins-it.PNG)
+
 ```
-docker exec -i-t <nombre contenedor> <programa o comando>
-```
-ó
-```
-docker exec -it <nombre contenedor> <programa o comando>
+docker exec -it jenkins-server /bin/sh
 ```
 
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
@@ -110,7 +103,7 @@ docker exec -it <nombre contenedor> <programa o comando>
 ### Para ver los logs de un contenedor
 
 ```
-docker logs n <cantidad de líneas> <nombre o id del contenedor> 
+docker logs -t -n 100 jenkins-server
 ```
 -t: para incluir la fecha y la hora
 

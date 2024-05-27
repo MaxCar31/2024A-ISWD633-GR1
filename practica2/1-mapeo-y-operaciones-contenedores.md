@@ -16,8 +16,10 @@ No puedes mapear puertos a un contenedor existente directamente después de su c
 
 ### Crear contenedor de Jenkins puertos contenedor: 8080 (interface web) y 50000 (comunicación entre nodos) imagen: jenkins/jenkins:alpine3.18-jdk11
 # COMPLETAR
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/c195889f-0917-4890-92b6-809ef7dab79c)
 
 # COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:8080
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/b3501ba8-dfd2-46c0-b75d-26b98afbb96f)
 
 ### ¿Cómo obtener la contraseña solicitada?
 Para obtener la contraseña solicitada es necesario ingresar al contenedor.
@@ -30,12 +32,15 @@ Para obtener la contraseña solicitada es necesario ingresar al contenedor.
 ```
 docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
+
+
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
 ### ¿Para qué sirve el argumento -l junto al comando ls?
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
 # COMPLETAR
 # COLOCAR UNA CAPTURA DE PANTALLA
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/e9ae4ef9-8420-4e25-9a6e-6bace7155f70)
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
 El comando **docker exec** te permite acceder a la sesión shell de un contenedor en ejecución, estarás dentro del contenedor y podrás ejecutar comandos como si estuvieras en una terminal normal. 
@@ -56,6 +61,8 @@ docker exec -i <nombre contenedor> /bin/bash
 ```
 docker exec -i <nombre contenedor> bash 
 ```
+
+
 **Considerar**
 - /bin/bash: Al especificar la ruta completa del shell, Docker buscará el ejecutable /bin/bash en el sistema de archivos del contenedor y lo ejecutará. Esto es útil cuando quieres asegurarte de que se está utilizando un shell específico que está ubicado en una ubicación conocida en el sistema de archivos del contenedor. 
 - bash: Al especificar solo el nombre del shell, Docker buscará el comando bash en las rutas del sistema (por lo general, en las rutas definidas en la variable de entorno PATH) del contenedor y lo ejecutará. Esto asume que bash está disponible en alguna de las rutas del sistema definidas en el contenedor.
@@ -70,6 +77,7 @@ Ejecutar
 whoami
 ```
 # COLOCAR UNA CAPTURA DE PANTALLA
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/14eec254-cdf5-4c75-b1ca-541b5ea47940)
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando ls.
@@ -92,6 +100,9 @@ docker exec -it <nombre contenedor> <programa o comando>
 # COMPLETAR
 
 ### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/2e96e8de-2231-45f0-b131-6422c19f45d4)
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/8a90ced0-76fa-4959-8fcd-7d17c23daeef)
+
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
 

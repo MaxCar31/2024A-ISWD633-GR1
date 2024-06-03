@@ -38,9 +38,9 @@ docker run -d --name mi_wordpress --network net-wp -v Users/LabP3E004/Desktop/Pr
 
 ### Personalizar la apariencia de wordpress y agregar una entrada
 
-Accede a la interfaz de WordPress en tu navegador (probablemente en http://localhost o http://<tu_direccion_ip>).
-Inicia sesión con tus credenciales de WordPress.
-Personaliza la apariencia en el menú de temas y agrega una nueva entrada en el panel de administració
+Acceder a la interfaz de WordPress en tu navegador
+Iniciar sesión con tus credenciales de WordPress.
+Personalizar la apariencia en el menú de temas y agrega una nueva entrada en el panel de administración
 
 ### Eliminar el contenedor y crearlo nuevamente, ¿qué ha sucedido?
 

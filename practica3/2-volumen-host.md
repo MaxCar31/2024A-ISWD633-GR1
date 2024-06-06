@@ -8,49 +8,42 @@ docker run -d --name <nombre contenedor> -v <ruta carpeta host>:<ruta carpeta co
 ### Crear un volumen tipo host con la imagen nginx:alpine, para la ruta carpeta host: directorio en donde se encuentra la carpeta html en tu computador y para la ruta carpeta contenedor: /usr/share/nginx/html esta ruta se obtiene al revisar la se obtiene desde la documentación
 ![Volúmenes](imagenes/volumen-host.PNG)
 # COMPLETAR CON EL COMANDO
-```
-docker run -d --name mi_nginx -v C:\Users\LabP3E004\Desktop\Practica\html:/usr/share/nginx/html nginx:alpine
-```
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
-Al ingresar al servidor de nginx, se verá el contenido de la carpeta html de tu máquina host.
+# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
-El archivo index.html del contenedor será reemplazado por el archivo index.html que se encuentra en la carpeta html del host.
+# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de nginx/html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-Al ingresar al servidor de nginx, verás el nuevo template HTML que has descargado y descomprimido en la carpeta html del host.
+# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
 ### Eliminar el contenedor
-```
-docker rm -f mi_nginx
-```
+# COMPLETAR CON EL COMANDO
 
 ### ¿Qué sucede al crear nuevamente el mismo contenedor con volumen de tipo host a los directorios definidos anteriormente?
-
-Al crear nuevamente el contenedor con el volumen de tipo host, el contenido del directorio html en el host se montará en /usr/share/nginx/html en el contenedor, por lo que el servidor nginx servirá el contenido actual de la carpeta html del host.
+# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
 ### ¿Qué hace el comando pwd?
+# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Si quieres incluir el comando pwd dentro de un comando de Docker, lo puedes hacer de diferentes maneras dependiendo del shell que estés utilizando.
 
-El comando pwd muestra la ruta del directorio de trabajo actual en el sistema de archivos del host.
 
 ### Volumen tipo host usando PWD y PowerShell
 ```
-docker run -d --name mi_nginx --publish published=80,target=80 -v ${PWD}/html:/usr/share/nginx/html nginx:alpine
-
+docker run -d --name <nombre contenedor> --publish published=<valorPuertoHost>,target=<valor> -v ${PWD}/<ruta relativa>:<ruta absoluta> <nombre imagen>:<tag> 
 ```
 
 ### Volumen tipo host usando PWD (Git Bash)
 
 ```
-docker run -d --name mi_nginx --publish published=80,target=80 -v $(pwd -W)/html:/usr/share/nginx/html nginx:alpine
-
+docker run -d --name <nombre contenedor> --publish published=<valorPuertoHost>,target=<valor> -v $(pwd -W)/html:/usr/share/nginx/html <nombre imagen>:<tag> 
 ```
 
 ### Volumen tipo host usando PWD (en Linux)
 
 ```
-docker run -d --name mi_nginx --publish published=80,target=80 -v $(pwd)/html:/usr/share/nginx/html nginx:alpine
+docker run -d --name <nombre contenedor> --publish published=<valorPuertoHost>,target=<valor> -v $(pwd)/html:/usr/share/nginx/html <nombre imagen>:<tag> 
 ```
 

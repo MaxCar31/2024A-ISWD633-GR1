@@ -68,6 +68,9 @@ docker run -d --name client-postgres --publish published=9500,target=80 -e PGADM
 
 ### Usar el cliente postgres para conectarse al servidor postgres, para la conexión usar el nombre del servidor en lugar de la dirección IP.
 
+<img width="924" alt="image" src="https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/9b5bc428-39ed-4aae-8d2d-d3d89481ded9">
+
+
 ### Crear los volúmenes necesarios para drupal, esto se puede encontrar en la documentación
 
 ```
@@ -80,8 +83,15 @@ docker volume create vol-drupal-sites
 ### Crear el contenedor server-drupal vinculado a la red, usar la imagen drupal, y vincularlo a los volúmenes nombrados
 docker run -d --name server-drupal --publish published=9700,target=80 -v <nombre volumen>:<ruta contenedor> -v <nombre volumen>:<ruta contenedor> -v <nombre volumen>:<ruta contenedor> -v <nombre volumen>:<ruta contenedor> --network net-drupal drupal
 
+```
+docker run -d --name server-drupal --publish published=9700,target=80 -v vol-drupal-web:/var/www/html -v vol-drupal-modules:/var/www/html/modules  -v vol-drupal-profiles:/var/www/html/profiles -v vol-drupal-sites:/var/www/html/sites --network net-drupal drupal
+```
+<img width="670" alt="image" src="https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/77433f43-820d-41c0-8ad4-6299f13d4879">
+
 ### Ingrese al server-drupal y siga el paso a paso para la instalación.
-# COMPLETAR CON UNA CAPTURA DE PANTALLA DEL PASO 4
+
+<img width="397" alt="image" src="https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/b54dbde1-7552-4dd2-baba-89a186292e53">
+
 
 _La instalación puede tomar varios minutos, mientras espera realice un diagrama de los contenedores que ha creado en este apartado._
 

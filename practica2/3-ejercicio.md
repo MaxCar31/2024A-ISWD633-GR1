@@ -32,7 +32,7 @@ La figura presenta el esquema creado en donde los puertos son:
 ### Acceder al servidor
 ### Conectarse a la base de datos info
 
-Para ello es importante que ambos contenedores esten en la misma network. 
+Para ello es de preferencia es mejor que ambos contenedores esten en la misma network. 
 
 <img width="789" alt="image" src="https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/f39d146d-17a7-4e66-b7c8-7a03c77ddd8c">
 

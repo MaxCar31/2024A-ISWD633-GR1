@@ -4,7 +4,7 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+
 Una imagen es una plantilla de solo lectura que define el contenido del contenedor. Un contenedor, por otro lado, es una instancia en ejecución de una imagen. Mientras que las imágenes se utilizan para crear contenedores, los contenedores son los entornos ejecutables que se derivan de estas imágenes. En otras palabras, la imagen es el plano y el contenedor es el edificio construido a partir de ese plano.
 
 ![Imagen y contenedores](imagenes/imagenYcontenedores.JPG)
@@ -25,7 +25,7 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR 
+
 
 ```
 docker pull hello-world
@@ -36,12 +36,10 @@ docker pull hello-world
 
 
 **¿Qué es nginx?**
-# COMPLETAR 
 
 Nginx es un servidor web de alto rendimiento y proxy inverso utilizado para manejar múltiples protocolos de Internet, incluyendo HTTP, HTTPS, SMTP, POP3 e IMAP. Es conocido por su alta eficiencia y capacidad para gestionar grandes volúmenes de conexiones concurrentes, lo que lo hace ideal para aplicaciones web modernas, equilibrado de carga y proxy de correo.
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR 
 ```
 docker pull nginx:alpine
 ```
@@ -54,7 +52,6 @@ docker pull nginx:alpine
 docker images
 ```
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
 ![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/d1c2fd3b-fd63-4677-9e23-0d4e41ec187e)
 
 
@@ -70,18 +67,16 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
 
 ```
 docker inspect hello-world
 ```
+
 ![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/c3e0c25b-cce6-465f-b650-228f65d9bc33)
 
 
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
-
-# COMPLETAR
 
 El ID de la imagen Docker se genera utilizando el algoritmo de hash SHA-256. Este algoritmo toma el contenido de la imagen y genera un identificador único, garantizando que cualquier cambio en el contenido de la imagen producirá un ID diferente.
 
@@ -100,7 +95,6 @@ docker rmi <nombre imagen>:<tag>
 
 Eliminar la imagen hello-world 
 
-# COMPLETAR
 ```
 docker rmi hello-world
 ```

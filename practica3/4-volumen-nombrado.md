@@ -94,11 +94,16 @@ docker run -d --name server-drupal --publish published=9700,target=80 -v vol-dru
 
 _La instalación puede tomar varios minutos, mientras espera realice un diagrama de los contenedores que ha creado en este apartado._
 
-# COMPLETAR CON EL DIAGRAMA SOLICITADO
+![image](https://github.com/MaxCar31/2024A-ISWD633-GR1/assets/141116497/42345caf-b3a4-44b7-8ca1-1c2fb6d39d41)
+
 
 ### Eliminar un volumen específico
 ```
 docker volume rm <nombre volumen>
+```
+
+```
+docker volume rm vol-postgres
 ```
 **Considerar**
 Datos Persistentes: Asegúrate de que el volumen no contiene datos críticos antes de eliminarlo, ya que esta operación no se puede deshacer.
